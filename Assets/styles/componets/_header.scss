@@ -1,0 +1,18 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 100%;
+    height: auto;
+    background-color: $prymari-color;
+    padding: $font-global;
+    .nav__link {
+        display: flex;
+        width: 20rem;
+        justify-content: space-between;
+        background-color:$prymari-color;
+    }
+    a {
+        color: black;
+    }
+}

@@ -1,0 +1,23 @@
+body {
+  background-color: #f9f4e8;
+  font-family: "leto" sans-serif;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #f9f4e8;
+  padding: 1rem;
+}
+.cabecalho .nav__link {
+  display: flex;
+  width: 20rem;
+  justify-content: space-between;
+  background-color: #f9f4e8;
+}
+.cabecalho a {
+  color: black;
+}/*# sourceMappingURL=style.css.map */
