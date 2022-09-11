@@ -1,6 +1,8 @@
 body {
   background-color: #f9f4e8;
   font-family: "leto" sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 body li {
   list-style: none;
@@ -26,9 +28,10 @@ body a {
 }
 .cabecalho .nav__link {
   display: flex;
-  width: 20rem;
-  justify-content: space-between;
   background-color: #f9f4e8;
+}
+.cabecalho .nav__link a {
+  margin: 1rem;
 }
 .cabecalho .link {
   color: #777674;
@@ -48,6 +51,10 @@ body a {
   padding: 0.5rem;
   border-radius: 5px;
 }
+.link__button:hover {
+  opacity: 90%;
+  text-decoration: underline;
+}
 
 .link__hosterr {
   background-image: linear-gradient(70deg, #eaae52, #ea686d);
@@ -56,9 +63,24 @@ body a {
   color: #f9f4e8;
 }
 
+.link:hover, .link__hosterr:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+@media screen and (max-width: 900px) {
+  .responsive {
+    display: none;
+  }
+  .cabecalho {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .container__principal {
-  width: 78vw;
-  height: 75vh;
+  width: 1100px;
+  min-width: none;
+  height: 90%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -73,7 +95,7 @@ body a {
   transform: rotate(-45deg);
   top: 1rem;
   right: 0.1666666667rem;
-  width: 19rem;
+  width: 300px;
 }
 .container__principal .imagem__fundo .img__pink {
   z-index: 2;
@@ -81,7 +103,7 @@ body a {
   transform: rotate(-35deg);
   top: 1rem;
   right: 0.1666666667rem;
-  width: 19rem;
+  width: 300px;
 }
 .container__principal .imagem__fundo .img__purple {
   z-index: 3;
@@ -89,7 +111,7 @@ body a {
   transform: rotate(-20deg);
   top: 1rem;
   right: 0.1666666667rem;
-  width: 19rem;
+  width: 300px;
 }
 .container__principal .imagem__fundo .img__logo {
   z-index: 4;
@@ -97,7 +119,7 @@ body a {
   transform: rotate(0deg);
   top: 1rem;
   right: 0.1666666667rem;
-  width: 19rem;
+  width: 300px;
 }
 .container__principal .container__texto {
   grid-column: 1/1;
@@ -110,7 +132,42 @@ body a {
   line-height: 2rem;
   letter-spacing: 0.1rem;
 }
+.container__principal .container__texto .icon__check::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding-top: 0.125rem;
+  background: url("/Assets/img/Checkmark.svg") center/contain no-repeat;
+}
 
+@media screen and (max-width: 1000px) {
+  .container__principal {
+    width: 800px;
+    min-width: none;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 305px 1fr;
+    justify-content: center;
+  }
+  .container__principal .imagem__fundo {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .container__principal .container__texto {
+    grid-column: span 3;
+    grid-row: 2/2;
+    margin-left: 2rem;
+  }
+  .container__principal .container__texto .subtitulo {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  .container__principal .container__texto .icon__check {
+    font-size: 1.4rem;
+  }
+}
 .formulario {
   display: flex;
   width: 100%;
@@ -128,4 +185,20 @@ body a {
 }
 .formulario .e-mail:placeholder-shown {
   font-size: 1.2rem;
+}
+
+.rodape {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+}
+.rodape .link__rodape, .rodape .talk {
+  display: flex;
+}
+.rodape .link__rodape a {
+  color: purple;
+  margin: 5px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,8 @@
+
 .container__principal {
-    width: 78vw;
-    height: 75vh;
+    width: 1100px;
+    min-width: none;
+    height: 90%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -8,21 +10,21 @@
         grid-column: 2/2;
         position: relative;
         .img__blue {
-          @include relevancia(1, absolute, -45deg );
-            width: $font-global * 19;
+          @include relevancia(1, absolute, -45deg ); 
+            width:$size-image;
         }
         .img__pink {
             @include relevancia(2, absolute, -35deg);
-            width: $font-global * 19;
+            width:$size-image;
         }
         .img__purple {
             @include relevancia(3, absolute, -20deg);
-            width: $font-global * 19;
+            width:$size-image;
         }
 
         .img__logo {
             @include relevancia(4, absolute, 0deg);
-            width: $font-global * 19;
+            width:$size-image;
         }
     }
     .container__texto {
@@ -35,5 +37,44 @@
             line-height:$font-global * 2;
             letter-spacing: $font-global / 10;
         }
+
+    .icon__check::before {
+        content: "";
+        display: inline-block;
+        width:18px;
+        height: 18px;
+        padding-top: $font-global / 8;
+        background: url('/Assets/img/Checkmark.svg') center / contain no-repeat;
+
     }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .container__principal {
+     width: 800px;
+     min-width: none;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 305px 1fr;
+        justify-content: center;
+        .imagem__fundo {
+            grid-column:span 2;
+            grid-row: span 1;
+        }
+        .container__texto {
+            grid-column: span 3;
+            grid-row:2/2;
+            margin-left:$font-global * 2;
+
+            & .subtitulo {
+                font-size:$font-global * 1.5;
+                line-height:$font-global * 2;
+                letter-spacing: $font-global / 10;
+            }
+            & .icon__check {
+                font-size:$font-global * 1.4;
+            }
+        }
+    }    
 }

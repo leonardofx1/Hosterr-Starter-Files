@@ -1,0 +1,17 @@
+.rodape {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    
+    .link__rodape, .talk {
+        display: flex; 
+      
+    }
+    .link__rodape a {
+        color:purple;
+        margin: 5px;
+    }
+}

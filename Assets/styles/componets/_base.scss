@@ -1,3 +1,4 @@
+
 // cores
 $prymari-color:#f9f4e8;
 $text-color:#777674;
@@ -8,6 +9,9 @@ $second-color: #4977ea;
 // fonte
 $font-global: 1rem;
 $font-family:'leto'sans-serif;
+
+$size-image:300px;
+
 // trechos
 @mixin relevancia($index, $position, $rotation) {
     z-index: $index;
@@ -20,8 +24,11 @@ $font-family:'leto'sans-serif;
 body{
     background-color:$prymari-color;
     font-family: $font-family;
+    overflow-x: hidden;
     & li {list-style: none;}
      & a{
         text-decoration: none;
     }
+    box-sizing: border-box;
+
 }

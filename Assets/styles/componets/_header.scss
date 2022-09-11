@@ -14,10 +14,10 @@
    }
     .nav__link {
         display: flex;
-        width: 20rem;
-        justify-content: space-between;
         background-color:$prymari-color;
-    
+        & a {
+            margin: 1rem
+        }
     }
     .link {
         color:$text-color;
@@ -39,6 +39,10 @@
         height: 2rem;
         padding: $font-global / 2;
         border-radius: 5px;
+        &:hover {
+            opacity: 90%;
+            text-decoration: underline;
+        }
 }
 
 .link__hosterr{
@@ -47,3 +51,20 @@
     border-radius: 25px;
     color:$prymari-color;
 }
+
+.link:hover, .link__hosterr:hover {
+    text-decoration: underline;
+    color: red;
+    
+}
+
+@media screen and (max-width: 900px ){
+    .responsive {
+        display: none;
+    }
+
+    .cabecalho {
+        display: flex;
+        justify-content: space-between;
+    }
+} 
