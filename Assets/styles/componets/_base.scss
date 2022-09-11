@@ -7,8 +7,15 @@ $second-color: #4977ea;
 }
 // fonte
 $font-global: 1rem;
-
 $font-family:'leto'sans-serif;
+// trechos
+@mixin relevancia($index, $position, $rotation) {
+    z-index: $index;
+    position: $position;
+    transform: rotate($rotation);
+    top:$font-global;
+    right:$font-global / 6;
+}
 
 body{
     background-color:$prymari-color;

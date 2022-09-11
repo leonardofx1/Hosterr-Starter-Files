@@ -1,0 +1,39 @@
+.container__principal {
+    width: 78vw;
+    height: 75vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .imagem__fundo {
+        grid-column: 2/2;
+        position: relative;
+        .img__blue {
+          @include relevancia(1, absolute, -45deg );
+            width: $font-global * 19;
+        }
+        .img__pink {
+            @include relevancia(2, absolute, -35deg);
+            width: $font-global * 19;
+        }
+        .img__purple {
+            @include relevancia(3, absolute, -20deg);
+            width: $font-global * 19;
+        }
+
+        .img__logo {
+            @include relevancia(4, absolute, 0deg);
+            width: $font-global * 19;
+        }
+    }
+    .container__texto {
+        grid-column: 1/1;
+        & .container__titulo {
+            font-size: $font-global * 3.5;
+        }
+        & .subtitulo {
+            font-size:$font-global * 1.3;
+            line-height:$font-global * 2;
+            letter-spacing: $font-global / 10;
+        }
+    }
+}
