@@ -6,13 +6,44 @@
     height: auto;
     background-color: $prymari-color;
     padding: $font-global;
+   & figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+   }
     .nav__link {
         display: flex;
         width: 20rem;
         justify-content: space-between;
         background-color:$prymari-color;
+    
     }
-    a {
-        color: black;
+    .link {
+        color:$text-color;
     }
+
+    .link__join {
+        display: flex;
+        gap:5px;
+        align-items: baseline;
+    }
+
+}
+   
+.link__button {
+        background-color:$second-color;
+        color:$prymari-color;
+        display: flex;
+        align-items: center;
+        height: 2rem;
+        padding: $font-global / 2;
+        border-radius: 5px;
+}
+
+.link__hosterr{
+    @include gradient;
+    padding: $font-global / 2;
+    border-radius: 25px;
+    color:$prymari-color;
 }
