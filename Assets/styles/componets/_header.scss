@@ -72,9 +72,12 @@
             display: inline-block;
         }
         .menu__hamburguer {
-            width: 70px;
-            height: 70px;
-            background: url('/Assets/img/menu.png') center / contain no-repeat ;
+            width: 50px;
+            height: 50px;
+            background-image: url('/Assets/img/menu.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
     }
   

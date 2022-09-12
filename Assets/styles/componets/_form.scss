@@ -13,7 +13,10 @@
 }
 
 @media screen and (max-width: 550px) {
-
+    .cabecalho {
+        justify-content: space-between;
+        width: 100vw; 
+    }
     .container__principal {
         width: 100vw;
     }

@@ -2,7 +2,6 @@ body {
   background-color: #f9f4e8;
   font-family: "leto" sans-serif;
   overflow-x: hidden;
-  padding: 2px;
   box-sizing: border-box;
 }
 body li {
@@ -84,9 +83,12 @@ body a {
     display: inline-block;
   }
   .cabecalho .menu__hamburguer {
-    width: 70px;
-    height: 70px;
-    background: url("/Assets/img/menu.png") center/contain no-repeat;
+    width: 50px;
+    height: 50px;
+    background-image: url("/Assets/img/menu.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .container__titulo {
     font-size: 0.1rem;
@@ -209,6 +211,10 @@ body a {
 }
 
 @media screen and (max-width: 550px) {
+  .cabecalho {
+    justify-content: space-between;
+    width: 100vw;
+  }
   .container__principal {
     width: 100vw;
   }
