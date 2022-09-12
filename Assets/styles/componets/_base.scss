@@ -21,14 +21,14 @@ $size-image:300px;
     right:$font-global / 6;
 }
 
-body{
+body {
     background-color:$prymari-color;
     font-family: $font-family;
     overflow-x: hidden;
+    padding: 2px;
     & li {list-style: none;}
      & a{
         text-decoration: none;
     }
     box-sizing: border-box;
-
 }

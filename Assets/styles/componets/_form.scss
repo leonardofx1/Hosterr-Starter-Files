@@ -1,6 +1,7 @@
 .formulario {
     display:flex;
     width: 100%;
+    flex-flow: wrap;
     margin:$font-global 0;
     & .e-mail {
         width: 80%;
@@ -8,5 +9,24 @@
         &:placeholder-shown {
             font-size: $font-global * 1.2;
         }
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .container__principal {
+        width: 100vw;
+    }
+    .formulario .e-mail {
+        width: 100%;
+        padding: $font-global;
+        margin: $font-global 0;
+    }
+    .link__button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin:$font-global / 2 0;
+        text-align: center;
     }
 }

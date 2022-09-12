@@ -6,6 +6,9 @@
     height: auto;
     background-color: $prymari-color;
     padding: $font-global;
+    & span {
+        display: none;
+    }
    & figure {
     display: flex;
     align-items: center;
@@ -39,6 +42,7 @@
         height: 2rem;
         padding: $font-global / 2;
         border-radius: 5px;
+        margin-right: $font-global / 3;
         &:hover {
             opacity: 90%;
             text-decoration: underline;
@@ -59,12 +63,28 @@
 }
 
 @media screen and (max-width: 900px ){
-    .responsive {
+     .responsive li a, .cabecalho nav{
         display: none;
     }
-
     .cabecalho {
-        display: flex;
         justify-content: space-between;
+        & span {
+            display: inline-block;
+        }
+        .menu__hamburguer {
+            width: 70px;
+            height: 70px;
+            background: url('/Assets/img/menu.png') center / contain no-repeat ;
+        }
     }
-} 
+  
+
+   .container__titulo {
+    font-size:$font-global - .9;
+    font-weight: normal;
+   }
+   .subtitulo {
+    line-height: normal;
+   }
+
+}
